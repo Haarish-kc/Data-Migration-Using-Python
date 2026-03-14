@@ -1,0 +1,121 @@
+<html>
+<head>
+    <title>Student Data Management Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+	.required::after {
+        content: " *";
+        color: red;
+    }
+    </style>
+</head>
+<body>
+    <h1><center>Student Data Management Form</center></h1>
+    <form action="connection.php" method="POST">
+        <!-- Student Section -->
+        <fieldset>
+            <legend>Student Information</legend>
+            <label for="student-id" class="required">Student ID</label>
+            <input type="number" id="student-id" name="student_id" required>
+
+            <label for="student-name" class="required">Name</label>
+            <input type="text" id="student-name" name="name" required>
+
+            <label for="age" class="required">Age</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender" class="required">Gender</label>
+            <select id="gender" name="gender">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+           
+
+            <label for="contact-number" class="required">Contact Number</label>
+            <input type="text" id="contact-number" name="contact_number">
+
+            <label for="email" class="required">Email</label>
+            <input type="email" id="email" name="email">
+        </fieldset>
+
+        <!-- Course Section -->
+        <fieldset>
+            <legend>Course Information</legend>
+            <label for="course-id" class="required">Course ID</label>
+            <input type="number" id="course-id" name="course_id" required>
+
+            <label for="course-title" class="required">Course Title</label>
+            <input type="text" id="course-title" name="course_title" required>
+
+	    <label for="Department-Name" class="required">Deparment Name</label>
+            <input type="text" id="Department-Name" name="Department-Name" required>
+            
+        </fieldset>
+
+        <!-- Enrollment Section -->
+        <fieldset>
+            <legend>Admission Information</legend>
+           
+	     
+	    <label for="tc-provided" class="required">TC Provided</label>
+               <select id="tc-provided" name="tc_provided" required>
+               <option value="" disabled selected>Select an option</option>
+               <option value="yes">Yes</option>
+               <option value="no">No</option>
+               </select>
+	    <label for="Marksheet-provided" class="required">Marksheet Provided</label>
+               <select id="Marksheet-provided" name="Marksheet_provided" required>
+               <option value="" disabled selected>Select an option</option>
+               <option value="yes">Yes</option>
+               <option value="no">No</option>
+               </select>
+
+
+            <label for="enrollment-date" class="required">Admission Date</label>
+            <input type="date" id="enrollment-date" name="enrollment_date" required>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <input type="submit" id="Submit" name="Submit"></button>
+    </form>
+
+</body>
+</html>
